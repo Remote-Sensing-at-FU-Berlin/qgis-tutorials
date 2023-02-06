@@ -3,7 +3,7 @@
 ## Tutorial 3 - Loading and visualizing raster data
 
 **Abstract** 
-In this Tutorial we will learn how to load and visualize raster files in  QGIS. The concept of histograms and which role they play for adapting the visualization of raster datasets in QGIS will be explained. As example dataset we will make use of a satellite image of the satellite sensor Sentinel-2.
+In this Tutorial we will learn how to load and visualize raster files in  QGIS. The concept of histograms and which role they play for adapting the visualization of raster datasets in QGIS will be explained. As example dataset we will make use of a satellite image of the satellite sensor Sentinel-2.
 
 Developed with QGIS version - Bialowieza 3.22.5
 

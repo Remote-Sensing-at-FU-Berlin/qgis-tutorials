@@ -10,11 +10,11 @@ Developed with QGIS version - Bialowieza 3.22.5
 
 ## 1 Setting the language of QGIS
 
-Before starting to work with QGIS we will set the language settings of QGIS to English. This is necessary as all descriptions of the Tutorials will refer to the english QGIS version. Working in another language might cause unnecessary confusions. To switch the language to English, we rst start QGIS by double-clicking the desktop icon called \QGIS Desktop 2.x.x with GRASS 7.x.x" (in your case the x-es will be some numbers indicating the QGIS version you have installed on your computer). Alternatively you can start QGIS from the start menu of your computer - the exact way how to do this varies with operating system and the Linux/Windows/Apple operating system version you have installed - but it is assumed that you know how to start a program on your computer. 
+Before starting to work with QGIS we will set the language settings of QGIS to English. This is necessary as all descriptions of the Tutorials will refer to the english QGIS version. Working in another language might cause unnecessary confusions. To switch the language to English, we first start QGIS by double-clicking the desktop icon called QGIS Desktop 2.x.x with GRASS 7.x.x" (in your case the x-es will be some numbers indicating the QGIS version you have installed on your computer). Alternatively you can start QGIS from the start menu of your computer - the exact way how to do this varies with operating system and the Linux/Windows/Apple operating system version you have installed - but it is assumed that you know how to start a program on your computer. 
 
 Then within QGIS, we open the "**Settings**" menu in the main menu bar of QGIS and select -> "**Options**" as shown in Figure 1.
 
-![Figure 1: Open the settings menu](assets/01-GUI-01.png)
+![Figure 1: Open the settings menu](assets/01-GUI-01.png "blubb")
 
 **Figure 1: Open the settings menu**
 
@@ -36,12 +36,12 @@ In Figure 3, the most important section of the QGIS GUI are marked with red numb
 **Table 1: Brief description of the individual window sections in QGIS as shown in Figure 3.**
 | QGIS section | Description  |
 |--|--|
-| Section 1 |This is the main visualization screen or window in QGIS. Once data is loaded, the les will be displayed here.  |
+| Section 1 |This is the main visualization screen or window in QGIS. Once data is loaded, the files will be displayed here.  |
 | Section 2 |This is the Layer Window. All loaded geodata will be displayed in this window in form of a single layer. The order of the listed layers determines their order in the visualization screen. Layers that are above other layers, will also be dis played above them. Right-clicks on the layers enable multiple direct actions that can be applied to the layers and additionally provide access to further dialogues to change the visualisation of the layer or access its detailed properties.  |
-| Section 3 |This is the main file menu of QGIS where all options of the program that are not included in toolboxes can be accessed.  |
+| Section 3 |This is the main file menu of QGIS where all options of the program that are not included in toolboxes can be accessed.  |
 | Section 4 | This is the standard tool bar of QGIS. Most frequently needed tools like saving, navigating in the visualization screen or selecting data are provided. |
-| Section 5 | This is the Vector-editing tool bar. It is required to change vector files (for example shapeles). These changes can include for example adding new or editing existing spatial objects (polygons/lines/points) to or in an existing shapele. |
-| Section 6 | This is the toolboxes-window. Here all analysis tools of QGIS and official add-ons (including for example GRASS GIS and SAGA GIS). The toolbox window has a search option on the top. Most analysis steps (except for visualiza-tion settings) are conducted with the tools provided in these toolboxes. |
+| Section 5 | This is the Vector-editing tool bar. It is required to change vector files (for example shapefiles). These changes can include for example adding new or editing existing spatial objects (polygons/lines/points) to or in an existing shapefile. |
+| Section 6 | This is the toolboxes-window. Here all analysis tools of QGIS and official add-ons (including for example GRASS GIS and SAGA GIS). The toolbox window has a search option on the top. Most analysis steps (except for visualiza-tion settings) are conducted with the tools provided in these toolboxes. |
 | Section 7 | This is the browser window where you can easily search your files and drap & drop it to the Layer window below to load the geodata to QGIS |
 
 ## Opening, closing and arranging windows / docks
@@ -60,7 +60,7 @@ Now the Layer window should re-appear.
 
 **Figure 4: Re-opening a closed window**
 
-The same procedure can be repeated for any (accidentally) closed window/panel. As you can see in the file menu there are numerous panels available that are not used by default in QGIS. Some of the available panels might be helpful depending on how you work in QGIS. For example you can try to activate the "Statistics" window. Once data is loaded, it will
+The same procedure can be repeated for any (accidentally) closed window/panel. As you can see in the file menu there are numerous panels available that are not used by default in QGIS. Some of the available panels might be helpful depending on how you work in QGIS. For example you can try to activate the "Statistics" window. Once data is loaded, it will
 give you the option to display some statistical summaries of the information on the currently selected layer.
 
 As a next exercise we will learn how to rearrange panels in the QGIS GUI. Panels can be arranged by **simple clicking and draging any panel in the grey bar on top of the panel depicting its title**. By doing this, panels locked to the sides of the GUI-space can be released and positioned at another place. To lock the panel on one of the sides of the GUI, the panels have to be dragged to the corresponding side until they lock. **Try to rearrange the currently open panels by positioning the Layer panel on the right side and the toolbox window to the left side of the GUI**. This should result in a GUI as depicted in Figure 5.
