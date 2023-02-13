@@ -35,14 +35,14 @@ In Figure 3, the most important section of the QGIS GUI are marked with red numb
 
 **Table 1: Brief description of the individual window sections in QGIS as shown in Figure 3.**
 | QGIS section | Description  |
-|--|--|
-| Section 1 |This is the main visualization screen or window in QGIS. Once data is loaded, the files will be displayed here.  |
-| Section 2 |This is the Layer Window. All loaded geodata will be displayed in this window in form of a single layer. The order of the listed layers determines their order in the visualization screen. Layers that are above other layers, will also be dis played above them. Right-clicks on the layers enable multiple direct actions that can be applied to the layers and additionally provide access to further dialogues to change the visualisation of the layer or access its detailed properties.  |
-| Section 3 |This is the main file menu of QGIS where all options of the program that are not included in toolboxes can be accessed.  |
-| Section 4 | This is the standard tool bar of QGIS. Most frequently needed tools like saving, navigating in the visualization screen or selecting data are provided. |
-| Section 5 | This is the Vector-editing tool bar. It is required to change vector files (for example shapefiles). These changes can include for example adding new or editing existing spatial objects (polygons/lines/points) to or in an existing shapefile. |
-| Section 6 | This is the toolboxes-window. Here all analysis tools of QGIS and official add-ons (including for example GRASS GIS and SAGA GIS). The toolbox window has a search option on the top. Most analysis steps (except for visualiza-tion settings) are conducted with the tools provided in these toolboxes. |
-| Section 7 | This is the browser window where you can easily search your files and drap & drop it to the Layer window below to load the geodata to QGIS |
+|--------------|--------------|
+| Section 1    |This is the main visualization screen or window in QGIS. Once data is loaded, the files will be displayed here.  |
+| Section 2    |This is the Layer Window. All loaded geodata will be displayed in this window in form of a single layer. The order of the listed layers determines their order in the visualization screen. Layers that are above other layers, will also be dis played above them. Right-clicks on the layers enable multiple direct actions that can be applied to the layers and additionally provide access to further dialogues to change the visualisation of the layer or access its detailed properties.  |
+| Section 3    |This is the main file menu of QGIS where all options of the program that are not included in toolboxes can be accessed.  |
+| Section 4    | This is the standard tool bar of QGIS. Most frequently needed tools like saving, navigating in the visualization screen or selecting data are provided. |
+| Section 5    | This is the Vector-editing tool bar. It is required to change vector files (for example shapefiles). These changes can include for example adding new or editing existing spatial objects (polygons/lines/points) to or in an existing shapefile. |
+| Section 6    | This is the toolboxes-window. Here all analysis tools of QGIS and official add-ons (including for example GRASS GIS and SAGA GIS). The toolbox window has a search option on the top. Most analysis steps (except for visualiza-tion settings) are conducted with the tools provided in these toolboxes. |
+| Section 7    | This is the browser window where you can easily search your files and drap & drop it to the Layer window below to load the geodata to QGIS |
 
 ## Opening, closing and arranging windows / docks
 
