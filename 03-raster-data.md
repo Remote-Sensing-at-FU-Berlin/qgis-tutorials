@@ -1,4 +1,4 @@
-﻿# QGIS
+# QGIS
 
 ## Tutorial 3 - Loading and visualizing raster data
 
@@ -18,25 +18,25 @@ For this and the subsequent tutorials you will need to work with a Sentinel-2 sa
 
 Similarly as learned in the last tutorial, we can open a raster file by **simply dragging and dropping the file from the browser-window to the layer window** (see Figure 1). 
 
-![Figure 1: Opening a raster file via drag and drop in QGIS](assets/03-raster-data01.png)
+![Figure 1: Opening a raster file via drag and drop in QGIS](assets/03-raster-data-01.png)
 
 **Figure 1: Opening a raster file via drag and drop in QGIS**
 
 Alternatively, we can also use the main file-menu of QGIS to add a raster file / raster layer as seen in the Figure 2. This option was not described in the previous tutorials on vector files, but this also works with vector files.
 
-![Figure 2: Opening a raster file via the file menu of QGIS](assets/03-raster-data02.png)
+![Figure 2: Opening a raster file via the file menu of QGIS](assets/03-raster-data-02.png)
 
 **Figure 2: Opening a raster file via the file menu of QGIS**
 
 If you chose the option to use the file menu, a new window will pop-up and you will then have to select the path to the raster file you want to open by clicking the button marked with 1 in Figure 3.
 
-![Figure 3: Open file dialogue menu of QGIS](assets/03-raster-data03.png)
+![Figure 3: Open file dialogue menu of QGIS](assets/03-raster-data-03.png)
 
 **Figure 3: Open file dialogue menu of QGIS**
 
 Once we have successfully opened the raster file, it should be displayed in the main visualization window of QGIS, similarly as shown in Figure 04.
 
-![Figure 4: Open file dialogue menu of QGIS](assets/03-raster-data04.png)
+![Figure 4: Open file dialogue menu of QGIS](assets/03-raster-data-04.png)
 
 **Figure 4: View after loading the raster file**
 
@@ -47,11 +47,11 @@ The opened raster dataset is a satellite scene from EU's Sentinel-2 satellite. Q
 To better understand how the optimization of the visualization of raster files works, it is important to have a good understanding how raster files are structured. Raster files can be pictured as a grid of pixels where each pixel contains a value. The range of these values depends on the data source for the raster data. They could for example originate from a model simulation that predicted air temperature. Then each pixel might have a value between approximately -30 and +50 showing the air temperature above the Earth surface in Degree Celsius. The values might also contain information about the altitude above (and below) sea level and might then range from -413 m (deepest point below sea level on a land surface, an area close to the Dead sea) to 8848 m (top of the Mount Everest). 
 In our case, the raster dataset stems from a satellite sensor which measures the amount of electromagnetic radiation reflected in certain wavelengths of the electromagnetic spectrum. In simpler words, one could say that the satellite sensor measures the amount of different colours (careful - this is a very simple way of putting it and physically not really correct) at certain locations (pixels) on the Earth surface and then stores this information into individual raster layers (see Figure 5). In our case, the satellite raster dataset consists of 10 raster layers that store information on how much blue, green and red light (and some additional colours that humans cannot see with their eyes) have been reflected in the different areas of the Earth surface that were observed by the satellite. Each raster layer contains information on one colour. Hence, our raster dataset can be pictured as a stack of individual raster layers or images which will be called "bands" or "channels" in the following (Figure 6).
 
-![Figure 5: Structure of raster data](assets/03-raster-data05.png)
+![Figure 5: Structure of raster data](assets/03-raster-data-05.png)
 
 **Figure 5: Structure of raster data**
 
-![Figure 6: Raster stack](assets/03-raster-data06.png)
+![Figure 6: Raster stack](assets/03-raster-data-06.png)
 
 **Figure 6: Raster stack**
 
@@ -61,7 +61,7 @@ So let us try this with our satellite image. To change the visualization setting
 
 **we either perform a right click on the raster layer in the layer window of QGIS and select properties or alternatively, we can perform a double-click on the same layer. This will open up the properties window, where we will select the "Symbology" tab. (marked with the red box in Figure 7)**
 
-![Figure 7: Raster symbology](assets/03-raster-data07.png)
+![Figure 7: Raster symbology](assets/03-raster-data-07.png)
 
 **Figure 7: Raster symbology window of QGIS**
 
@@ -69,7 +69,7 @@ Now we will assign the satellite bands which collected information on blue, gree
 
 **Clicking the drop down menu for the "Red Band" (marked with "2" in Figure 7) and select Band 03, which corresponds to the band of the satellite that collected information on electromagnetic radiation that corresponds to red light. Analogously, we will select Band 02 for the "Green Band" of QGIS (marked with "3" in Figure 7 normally, this channel should already be correct) and then Band 01 for the "Blue band" of QGIS (marked with "4" in Figure 7). Then we select "Apply" and then "OK" to see how this changes the visualization of the image (Figure 8).**
 
-![Figure 8: View after adjusting the settings](assets/03-raster-data08.png)
+![Figure 8: View after adjusting the settings](assets/03-raster-data-08.png)
 
 **Figure 8: View after adjusting the settings**
 
@@ -80,7 +80,7 @@ To do this,
 
 **We return to the "Properties" window and select the "Symbology" tab. Now we will click the area marked with "6" in Figure 7 to open some additional options to load minimum and maximum values for each raster layer as depicted in Figure 9.**
 
-![Figure 9: Raster symbology - advanced settings](assets/03-raster-data09.png)
+![Figure 9: Raster symbology - advanced settings](assets/03-raster-data-09.png)
 
 **Figure 9: Raster symbology window in QGIS - advanced settings**
 
@@ -88,7 +88,7 @@ There are three options available to automatically derive minimum and maximum pi
 
 So why do we have to use such statistics to improve the visualization? This can be explained best using a histogram. A histogram shows the distribution of values of a dataset by plotting the frequency of values occurring in a defined value range on the y-axis and the value ranges themselves on the x axis. In Figure 10 an example for a histogram of the pixel values of a raster image is shown. In the upper part of Figure 10 one can see the histogram of the full value range of the raster image with values between 0 and 255 (which would indicate an eight bit image). In this histogram one can clearly see that there are hardly any very low values (close to 0) and also hardly any very high values (close to 255), while most values accumulate in the middle of the value range (between around 60 and 180).
 
-![Figure 10: A histogram](assets/03-raster-data10.png)
+![Figure 10: A histogram](assets/03-raster-data-10.png)
 
 **Figure 10: A histogram of raster values**
 
@@ -104,7 +104,7 @@ We will now adapt the value ranges of the three channels of our satellite image 
 
 This will result in the image shown in Figure 11
 
-![Figure 11: View after adjusting the image stretch](assets/03-raster-data11.png)
+![Figure 11: View after adjusting the image stretch](assets/03-raster-data-11.png)
 
 **Figure 11: View after adjusting the image stretch**
 
@@ -112,7 +112,7 @@ The colour of the sea has turned from very dark or black to blue which may match
 
 In the new visualization settings, the sea appears blue but also shows some more details in compared to the earlier two visualization settings. However, might there be ways to further  adapt the visualization to see even more details of the sea? 
 
-![Figure 12: Zoom tool](assets/03-raster-data12.png)
+![Figure 12: Zoom tool](assets/03-raster-data-12.png)
 
 **Figure 12: The zoom tool of QGIS**
 
@@ -121,17 +121,17 @@ Indeed there are! One solution is to adapt the value range again but this time o
 **clicking the "zoom" tool-button and then dragging a square within an area of the image which is only covered by the sea. This will lead to a view where only blue areas are visible in the QGIS visualization window (as shown in Figure 14). Next, we will repeat the steps to optimize the value ranges as we have learned before. That is, we will open the properties window, select the "symbology" tab and open the option to automatically estimate minimum and maximum values by clicking the area marked with "6" in Figure 7. The only thing we will do difffferent this time, is that we will change the dropdown menu marked with 3 in Figure 9 from "Whole Raster" to "Current canvas". Then we will press "Apply" and then "OK" and close the Properties window.**
 
 
-![Figure 13: View after applying the zoom tooll](assets/03-raster-data13.png)
+![Figure 13: View after applying the zoom tooll](assets/03-raster-data-13.png)
 
 **Figure 13: View after applying the zoom tool to zoom into an area only covered by the sea**
 
-![Figure 14: View after optimizing the visualization settings for the sea](assets/03-raster-data14.png)
+![Figure 14: View after optimizing the visualization settings for the sea](assets/03-raster-data-14.png)
 
 **Figure 14: View after optimizing the visualization settings for the sea**
 
 The will lead to a new visualization as shown in Figure 14. As you can see, the formerly uniformely blue image turned into a quite colorful image where lots of fine details about the sea surface became visible. By activating the "Current canvas" option, QGIS calculated the statistics only for pixels located in the currently visible part of the image. That is, only sea pixels were considered to derive the min and max values. If you now use the "zoom-out" button, located next to the "zoom-in" button, you can see that all the other areas in the image are very bright and no details can be seen anymore in these areas (Figure 15). This is because all of the land-surface areas have notably higher pixel values than the pixels located in the sea and are hence mostly assigned the maximum value of the defined range. You can also re-open the properties window and the style tab and have a look at the current value.
 
-![Figure 15: View of the full image after the adaptation of the visualization options to improve the level of details displayed in sea areas](assets/03-raster-data15.png)
+![Figure 15: View of the full image after the adaptation of the visualization options to improve the level of details displayed in sea areas](assets/03-raster-data-15.png)
 **Figure 15: View of the full image after the adaptation of the visualization options to improve the level of details displayed in sea areas**
 
 ## Exercise Tutorial 3
@@ -142,7 +142,7 @@ To practice a bit more raster visualization options, try do conduct the followin
 
 (2) Zoom to the extent of the satellite image and export the current view by selecting "Project" -> "Save as Image" from the main menu of QGIS (Figure 16). This will be the first proof that you completed the Tutorial.
 
-![Figure 16: Export current view as image](assets/03-raster-data16.png)
+![Figure 16: Export current view as image](assets/03-raster-data-16.png)
 
 ** Figure 16: Save current view to image**
 
