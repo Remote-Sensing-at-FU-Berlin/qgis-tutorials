@@ -1,0 +1,31 @@
+name: Send submodule updates to parent repo
+
+on:
+  workflow_dispatch:
+  push:
+    branches: 
+      - main
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          repository: Remote-Sensing-at-FU-Berlin/Remote-Sensing-at-FU-Berlin.github.io
+          token: ${{ secrets.PAT }}
+          submodules: true
+
+      - name: Pull & update submodules recursively
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote
+
+      - name: Commit
+        run: |
+          git config user.email ${{ secrets.EMAIL }}
+          git config user.name ${{ secrets.NAME }}
+          git add --all
+          git commit -m "Update submodules" || echo "No changes to commit"
+          git push
